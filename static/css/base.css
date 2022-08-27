@@ -1,12 +1,53 @@
-body {
-  background: url("/media/desktop_wide.jpg") no-repeat center
-    center fixed;
+main {
+  background: url(/media/mobile.jpg) no-repeat top center scroll;
   background-size: cover;
-  height: calc(100vh - 164px);
   color: #555;
+  height: calc(100vh - 56px);
+  margin-top: 56px;
+}
+
+.navbar-brand {
+  width: 50%;
 }
 
 .navbar-brand img {
-  height: 25%;
-  width: 25%;
+  height: 33%;
+  width: 33%;
+}
+
+
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 440px) {
+  main {
+    background: url(/media/tablet.jpg) no-repeat top center scroll;
+    background-size: cover;
+  }
+  .navbar-brand img {
+    height: 25%;
+    width: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    background: url(/media/desktop_narrow.jpg) no-repeat top center scroll;
+    background-size: cover;
+  }
+  .navbar-brand img {
+    height: 20%;
+    width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    background: url(/media/desktop_wide.jpg) no-repeat top center scroll;
+    background-size: cover;
+  }
+  .navbar-brand img {
+    height: 15%;
+    width: 15%;
+  }
 }
