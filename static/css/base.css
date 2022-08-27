@@ -6,6 +6,12 @@ main {
   margin-top: 56px;
 }
 
+nav hr:not([size]) {
+  width: 40%;
+  height: 3px;
+  margin: 0 auto;
+}
+
 .navbar-brand {
   width: 50%;
 }
@@ -15,8 +21,6 @@ main {
   width: 33%;
 }
 
-
-
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 440px) {
@@ -24,6 +28,7 @@ main {
     background: url(/media/tablet.jpg) no-repeat top center scroll;
     background-size: cover;
   }
+
   .navbar-brand img {
     height: 25%;
     width: 25%;
@@ -35,9 +40,21 @@ main {
     background: url(/media/desktop_narrow.jpg) no-repeat top center scroll;
     background-size: cover;
   }
+
+  nav hr:not([size]) {
+    width: 15%;
+    height: 3px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
   .navbar-brand img {
     height: 20%;
     width: 20%;
+  }
+
+  .form-control[type="search"] {
+    width: 50%;
   }
 }
 
@@ -46,8 +63,13 @@ main {
     background: url(/media/desktop_wide.jpg) no-repeat top center scroll;
     background-size: cover;
   }
+  
   .navbar-brand img {
     height: 15%;
     width: 15%;
+  }
+
+  .form-control[type="search"] {
+    width: 33%;
   }
 }
