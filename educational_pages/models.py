@@ -2,6 +2,7 @@ from django.db import models
 
 class Post(models.Model):
     title = models.CharField(max_length=254, null=False, blank=False)
+    slug = models.SlugField(null=False, blank=False, default="")
     author = models.CharField(max_length=254, null=True, blank=True)
     tags = models.CharField(max_length=254, null=True, blank=True)
     content = models.TextField(null=False, blank=False)

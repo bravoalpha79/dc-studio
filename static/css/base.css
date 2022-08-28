@@ -1,9 +1,13 @@
-main {
+html {
+  height: 100%;
+}
+
+body {
   background: url(/media/mobile.jpg) no-repeat top center scroll;
   background-size: cover;
   color: #555;
-  height: calc(100vh - 56px);
-  margin-top: 56px;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
 }
 
 nav hr:not([size]) {
@@ -17,26 +21,21 @@ nav hr:not([size]) {
 }
 
 .navbar-brand img {
-  height: 33%;
-  width: 33%;
+  height: 2.5rem;
+  width: 3.5rem;
 }
 
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 440px) {
-  main {
+  body {
     background: url(/media/tablet.jpg) no-repeat top center scroll;
     background-size: cover;
-  }
-
-  .navbar-brand img {
-    height: 25%;
-    width: 25%;
   }
 }
 
 @media (min-width: 768px) {
-  main {
+  body {
     background: url(/media/desktop_narrow.jpg) no-repeat top center scroll;
     background-size: cover;
   }
@@ -48,27 +47,17 @@ nav hr:not([size]) {
     margin-left: auto;
   }
 
-  .navbar-brand img {
-    height: 20%;
-    width: 20%;
-  }
-
   .form-control[type="search"] {
     width: 50%;
   }
 }
 
 @media (min-width: 1200px) {
-  main {
+  body {
     background: url(/media/desktop_wide.jpg) no-repeat top center scroll;
     background-size: cover;
   }
   
-  .navbar-brand img {
-    height: 15%;
-    width: 15%;
-  }
-
   .form-control[type="search"] {
     width: 33%;
   }

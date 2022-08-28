@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block corecss %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/educational.css' %}">
+{% endblock %}
+
+{% block extra_title %} - Psihoedukativni kutak{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+      <h2 class="page-title mt-3">Psihoedukativni kutak</h2>
+      <div class="row">
+        {% for post in posts %}
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            {{ post.title }}
+            {{ post.author }} @ {{ post.published }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}
+
