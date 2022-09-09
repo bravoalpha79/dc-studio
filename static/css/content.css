@@ -6,6 +6,11 @@ body {
   margin-top: 80px;
 }
 
+.post-image img{
+  max-height: 200px;
+  max-width: 200px;
+}
+
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 440px) {
