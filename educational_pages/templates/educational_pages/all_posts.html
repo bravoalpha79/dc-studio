@@ -27,6 +27,15 @@
           </div>
         {% endfor %}
       </div>
+      <button type="button" class="btn btn-outline-dark btn-sm btt-button"> ^ </button>
     </div>
 {% endblock %}
 
+{% block postloadjs %}
+  {{ block.super }}
+  <script>
+      document.querySelector(".btt-button").addEventListener("click", function(e){
+        window.scrollTo(0,0);
+      })
+  </script>
+{% endblock %}

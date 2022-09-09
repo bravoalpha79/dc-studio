@@ -11,6 +11,14 @@ body {
   max-width: 200px;
 }
 
+.btt-button {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 440px) {
