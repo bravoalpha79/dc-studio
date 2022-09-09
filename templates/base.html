@@ -23,7 +23,7 @@
   <title>Klinički studio{% block extra_title %}{% endblock %}</title>
 </head>
 <body>
-  <nav class="navbar fixed-top navbar-light bg-light">
+  <nav class="navbar fixed-top navbar-light bg-light autohide">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{{ MEDIA_URL}}logo.jpg">
@@ -70,5 +70,9 @@
     {% block content %}
     {% endblock %}
   </main>
+
+  {% block postloadjs %}
+    <script src="{% static 'js/navbar.js' %}"></script>
+  {% endblock %}
 </body>
 </html>

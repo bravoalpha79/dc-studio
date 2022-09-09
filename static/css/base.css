@@ -25,6 +25,15 @@ nav hr:not([size]) {
   width: 3.5rem;
 }
 
+/* Navbar autohide - https://bootstrap-menu.com/detail-autohide.html*/
+
+.scrolled-down {
+  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
 /* --- MEDIA QUERIES --- */
 
 @media (min-width: 440px) {
