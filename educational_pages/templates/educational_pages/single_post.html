@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load l10n %}
+
+{% block corecss %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/content.css' %}">
+{% endblock %}
+
+{% block extra_title %} - {{ post.title }}{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-xl-8">
+          <h2 class="page-title mt-3">{{ post.title }}</h2>
+          <p>Autor: {{ post.author }}, {{ post.published | date:"j. E Y."}}</p>
+          <div class="post-image">
+            {% if post.image %}
+              <img src="{{ post.image.url }}" class="img-fluid">
+            {% else %}
+              <!-- image by Ranjithsiji, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons-->
+              <img src="{{ MEDIA_URL }}no-image.png" class="img-fluid">
+            {% endif %}
+          </div>
+          <div class="post-content">
+            {{ post.content | safe }}
+          </div>
+        </div>
+      </div>
+      <div class="btt-button">
+        <a class="btn btn-outline-secondary" href="#" role="button">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script>
+      document.querySelector(".btt-button").addEventListener("click", function(e){
+        window.scrollTo(0,0);
+      })
+  </script>
+{% endblock %}
