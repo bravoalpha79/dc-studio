@@ -6,6 +6,7 @@ body {
   background: url(/media/mobile.jpg) no-repeat top center scroll;
   background-size: cover;
   color: #555;
+  font-family: "Quicksand", sans-serif;
   height: calc(100vh - 80px);
   margin-top: 80px;
 }
@@ -18,6 +19,10 @@ nav hr:not([size]) {
 
 .navbar-brand {
   width: 50%;
+}
+
+.navbar-brand:hover {
+  opacity: 0.7;
 }
 
 .navbar-brand img {
