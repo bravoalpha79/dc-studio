@@ -1,5 +1,5 @@
 body {
-  background: url(/media/bg_mobile.jpg) no-repeat top center scroll;
+  background: url(/media/bg_mobile.jpg) no-repeat top center fixed;
   background-size: cover;
   color: #555;
   height: calc(100vh - 80px);
@@ -23,21 +23,21 @@ body {
 
 @media (min-width: 440px) {
   body {
-    background: url(/media/bg_tablet.jpg) no-repeat top center scroll;
+    background: url(/media/bg_tablet.jpg) no-repeat top center fixed;
     background-size: cover;
   }
 }
 
 @media (min-width: 768px) {
   body {
-    background: url(/media/bg_desktop_narrow.jpg) no-repeat top center scroll;
+    background: url(/media/bg_desktop_narrow.jpg) no-repeat top center fixed;
     background-size: cover;
   }
 }
 
 @media (min-width: 1200px) {
   body {
-    background: url(/media/bg_desktop_wide.jpg) no-repeat top center scroll;
+    background: url(/media/bg_desktop_wide.jpg) no-repeat top center fixed;
     background-size: cover;
   }
 }
