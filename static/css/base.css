@@ -76,3 +76,11 @@ nav hr:not([size]) {
     width: 33%;
   }
 }
+
+/* fix for background image on Safari/iOS - https://stackoverflow.com/a/52266360 */
+
+@supports (-webkit-touch-callout: inherit) {
+  body {
+    background-attachment: scroll;
+  }
+}
