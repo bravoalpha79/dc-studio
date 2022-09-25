@@ -6,6 +6,17 @@ body {
   margin-top: 80px;
 }
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: white;
+  opacity: 0.5;
+  z-index: -1;
+}
+
 .post-image img{
   max-height: 200px;
   max-width: 200px;
