@@ -3,7 +3,7 @@ from .models import Associate, TeamMember
 
 # Create your views here.
 def view_team(request):
-    team_members = TeamMember.objects.all()
+    team_members = TeamMember.objects.all().order_by("id")
     associates = Associate.objects.all()
     context = {
         "team_members": team_members,
