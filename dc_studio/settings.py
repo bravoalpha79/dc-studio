@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'storages',
     'django_summernote',
     'home',
-    'educational_pages'
+    'educational_pages',
+    'team'
 ]
 
 MIDDLEWARE = [

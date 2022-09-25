@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load l10n %}
+
+{% block corecss %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/content.css' %}">
+  <link rel="stylesheet" href="{% static 'css/team.css' %}">
+{% endblock %}
+
+{% block extra_title %} - Stručni tim{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+      <div class="row justify-content-center mt-5 mb-3">
+        <div class="col-11 col-lg-10 col-xl-7 mt-3">
+          <h2 class="page-title mt-3">Stručni tim</h2>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      {% for member in team_members %}
+        <div class="member row justify-content-center mt-5 mb-3">
+            <div class="team-member col-11 col-lg-10 col-xl-7 mt-3">
+              <h5 class"member-title">
+                {{ member.name_and_title }}
+              </h5>
+              <div class="member-image">
+                {% if member.image %}
+                  <img src="{{ member.image.url }}" class="img-fluid rounded">
+                {% else %}
+                  <!-- image by Ranjithsiji, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons-->
+                  <img src="{{ MEDIA_URL }}no-image.png" class="img-fluid">
+                {% endif %}
+              </div>
+              <div class="member-bio mb-5">
+                {{ member.biography | safe }}
+              </div>
+            </div>
+        </div>
+        <hr class="member-hr">
+      {% endfor %}
+      <div class="row justify-content-center mt-5 mb-5">
+        <div class="col-11 col-lg-10 col-xl-7">
+          <h3>Suradnici</h3>
+        </div>
+      </div>
+      {% for associate in associates %}
+        <div class="member row justify-content-center mb-3">
+            <div class="team-member col-11 col-lg-10 col-xl-7 mt-3">
+              <h5 class"member-title">
+                {{ associate.name_and_title }}
+              </h5>
+              <div class="member-image">
+                {% if associate.image %}
+                  <img src="{{ associate.image.url }}" class="img-fluid rounded">
+                {% else %}
+                  <!-- image by Ranjithsiji, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons-->
+                  <img src="{{ MEDIA_URL }}no-image.png" class="img-fluid rounded no-image">
+                {% endif %}
+              </div>
+              <div class="member-bio mb-5">
+                {{ associate.biography | safe }}
+              </div>
+            </div>
+        </div>
+        <hr class="member-hr">
+      {% endfor %}
+      <div class="btt-button">
+        <a class="btn btn-outline-secondary" href="#" role="button">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script>
+      document.querySelector(".btt-button").addEventListener("click", function(e){
+        window.scrollTo(0,0);
+      })
+  </script>
+{% endblock %}

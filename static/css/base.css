@@ -6,7 +6,7 @@ body {
   background: url(/media/mobile.jpg) no-repeat top center scroll;
   background-size: cover;
   color: #555;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif !important;
   height: calc(100vh - 80px);
   margin-top: 80px;
 }
