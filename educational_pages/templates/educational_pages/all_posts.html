@@ -20,23 +20,25 @@
   <div class="overlay"></div>
   {% for post in posts %}
     <div class="post row justify-content-center mt-3 mb-3">
-        <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-3">
-          <h5 class="post-title mb-4">
+        <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-4">
+          <h5 class="post-title mb-2">
             <a class="link-wrapper" href="{% url 'view_post' post.slug %}">
               {{ post.title }}
             </a>
           </h5>
           {% if post.image %}
-            <div class="post-image">
+            <div class="post-image mt-4 mb-4">
               <img src="{{ post.image.url }}" class="img-fluid">
             </div>
           {% endif %}
-          <div class="post-details mt-3 mb-5">
-            <p class="post-author fw-bold mb-1">Autor: {{ post.author }}</p>
+          <div class="post-details mt-2 mb-5">
+            {% if post.author %}
+              <p class="post-author fw-bold mb-1">Autor: {{ post.author }}</p>
+            {% endif %}
             <small>Objavljeno: {{ post.date_published }}</small>
           </div>
           <div class="post-content mt-3 mb-5">
-            {{ post.content | safe | truncatewords_html:50 }}
+            <em>{{ post.content | safe | truncatewords_html:50 }}</em>
           </div>
         </div>
     </div>

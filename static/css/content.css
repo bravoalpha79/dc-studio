@@ -27,11 +27,6 @@ body {
   text-decoration: none;
 }
 
-.post-image img{
-  max-height: 200px;
-  max-width: 200px;
-}
-
 .btt-button {
   height: 40px;
   width: 40px;

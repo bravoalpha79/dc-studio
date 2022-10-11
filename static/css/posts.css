@@ -1,5 +1,18 @@
 .post-hr {
   background-color: #555;
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
+}
+
+.post-image img{
+  max-height: 200px;
+  max-width: 200px;
+}
+
+img.note-float-left {
+  margin-right: 1rem;
+}
+
+img.note-float-right {
+  margin-left: 1rem;
 }
