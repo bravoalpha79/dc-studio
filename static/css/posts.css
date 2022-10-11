@@ -16,3 +16,7 @@ img.note-float-left {
 img.note-float-right {
   margin-left: 1rem;
 }
+
+.spacer {
+  height: 3rem;
+}
