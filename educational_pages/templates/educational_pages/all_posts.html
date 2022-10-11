@@ -5,38 +5,50 @@
 {% block corecss %}
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'css/content.css' %}">
+  <link rel="stylesheet" href="{% static 'css/posts.css' %}">
 {% endblock %}
 
 {% block extra_title %} - Psihoedukativni kutak{% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
-      <div class="overlay"></div>
+<div class="container-fluid">
+  <div class="row justify-content-center mt-5 mb-5">
+    <div class="col-11 col-lg-10 col-xl-7 mt-3">
       <h2 class="page-title mt-3">Psihoedukativni kutak</h2>
-      <div class="row justify-content-center mt-5">
-        {% for post in posts %}
-          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-3 text-center">
-            <h4>
-              <a href="{% url 'view_post' post.slug %}">{{ post.title }}</a>
-            </h4>
-            <p>{{ post.author }} @ {{ post.published | date:"j. E Y." }}</p>
-            <div class="post-image">
-              {% if post.image %}
-                <img src="{{ post.image.url }}" class="img-fluid">
-              {% else %}
-                <!-- image by Ranjithsiji, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons-->
-                <img src="{{ MEDIA_URL }}no-image.png" class="img-fluid">
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-      <div class="btt-button">
-        <a class="btn btn-outline-secondary" href="#" role="button">
-          <i class="fas fa-arrow-up"></i>
-        </a>
-      </div>
     </div>
+  </div>
+  <div class="overlay"></div>
+  {% for post in posts %}
+    <div class="post row justify-content-center mt-3 mb-3">
+        <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-3">
+          <h5 class="post-title mb-4">
+            <a class="link-wrapper" href="{% url 'view_post' post.slug %}">
+              {{ post.title }}
+            </a>
+          </h5>
+          {% if post.image %}
+            <div class="post-image">
+              <img src="{{ post.image.url }}" class="img-fluid">
+            </div>
+          {% endif %}
+          <div class="post-details mt-3 mb-5">
+            <p class="post-author fw-bold mb-1">Autor: {{ post.author }}</p>
+            <small>Objavljeno: {{ post.date_published }}</small>
+          </div>
+          <div class="post-content mt-3 mb-5">
+            {{ post.content | safe | truncatewords_html:50 }}
+          </div>
+        </div>
+    </div>
+    <hr class="post-hr">
+  {% endfor %}
+  
+  <div class="btt-button">
+    <a class="btn btn-outline-secondary" href="#" role="button">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

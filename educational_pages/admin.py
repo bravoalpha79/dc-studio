@@ -10,11 +10,11 @@ class PostAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
         "title",
         "author",
         "tags",
-        "published"
+        "date_published"
     )
 
     prepopulated_fields = {"slug": ("title",)}
 
-    ordering = ("-published", )
+    ordering = ("-date_published", )
 
 admin.site.register(Post, PostAdmin)

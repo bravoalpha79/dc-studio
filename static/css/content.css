@@ -12,9 +12,19 @@ body {
   top: 0;
   left: 0;
   position: fixed;
-  background: white;
+  background: #fff;
   opacity: 0.5;
   z-index: -1;
+}
+
+.link-wrapper {
+  color: initial;
+  text-decoration: none;
+}
+
+.link-wrapper:hover {
+  color: rgb(144, 29, 211) !important;
+  text-decoration: none;
 }
 
 .post-image img{
