@@ -4,9 +4,17 @@
   width: 50%;
 }
 
-.post-image img{
-  max-height: 200px;
-  max-width: 200px;
+img.note-float-left, 
+img.note-float-right,
+.post-image img,
+.in-post-image img {
+  max-height: 40vw;
+  max-width: 40vw;
+}
+
+img.note-float-left,
+img.note-float-right {
+  margin-top: .4rem;
 }
 
 img.note-float-left {
