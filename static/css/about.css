@@ -1,0 +1,10 @@
+.about-content p:has(img) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.about-content p img {
+    max-width: 80%;
+    padding: .5rem;
+}

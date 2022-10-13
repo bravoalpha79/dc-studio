@@ -25,4 +25,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('psihoedukativni_kutak/', include('educational_pages.urls')),
     path('strucni_tim/', include('team.urls')),
+    path('o_klinickom_studiju/', include('about.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

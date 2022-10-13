@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load l10n %}
+
+{% block corecss %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/content.css' %}">
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block extra_title %} - O Kliničkom studiju{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-5 mb-3">
+            <div class="col-11 col-lg-10 col-xl-7 mt-3">
+            <h2 class="page-title mt-3">O Kliničkom studiju</h2>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="row justify-content-center mt-5 mb-3">
+            <div class="about col-11 col-lg-10 col-xl-7 mt-3">
+                <div class="about-content mb-5">
+                {{ about.content | safe }}
+                </div>
+            </div>
+        </div>
+        <div class="btt-button">
+            <a class="btn btn-outline-secondary" href="#" role="button">
+            <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script>
+      document.querySelector(".btt-button").addEventListener("click", function(e){
+        window.scrollTo(0,0);
+      })
+  </script>
+{% endblock %}
