@@ -8,8 +8,7 @@ class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = "content"
 
     list_display = (
-        "content",
-        "created_at"
+        "created_at",
     )
 
     ordering = ("-created_at", )
