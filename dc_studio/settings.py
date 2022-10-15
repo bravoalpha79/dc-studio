@@ -116,6 +116,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        'fontNames': ['Helvetica', 'Verdana', 'Arial', 'Quicksand'],
+        'fontNamesIgnoreCheck': ['Quicksand'],
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
