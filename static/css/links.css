@@ -1,5 +1,6 @@
 .links a, 
 .student-links a {
   color: inherit;
+  overflow-wrap: break-word;
   text-decoration: none;
 }
