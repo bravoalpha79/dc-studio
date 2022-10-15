@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load l10n %}
+
+{% block corecss %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/content.css' %}">
+  <link rel="stylesheet" href="{% static 'css/links.css' %}">
+{% endblock %}
+
+{% block extra_title %} - Korisni linkovi{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+      <div class="row justify-content-center mt-5 mb-3">
+        <div class="col-11 col-lg-10 col-xl-7 mt-3">
+          <h2 class="page-title mt-3">Korisni linkovi</h2>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="links row justify-content-center mt-5 mb-3">
+        <div class="col-11 col-lg-10 col-xl-7 mt-3 mb-3">
+          Sve one koji se još nisu odlučili za terapijsku pomoć u četiri oka pozivamo na stranice:
+        </div>
+        {% for link in links %}
+          <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
+            {% if link.title %}
+              <a class="link" href="{{ link.url }}">{{ link.title }}</a>
+            {% else %}
+              <a class="link" href="{{ link.url }}">{{ link.url }}</a>
+            {% endif %}
+          </div>
+        {% endfor %}
+        <div class="col-11 col-lg-10 col-xl-7 mt-5">
+          gdje će naći korisne informacije i savjete povezane s različitim vrstama psihičkih smetnji.
+        </div>
+      </div>
+      <div class="student-links row justify-content-center mt-5 mb-3">
+        <div class="col-11 col-lg-10 col-xl-7 mt-3">
+          I još ponešto za studente:
+        </div>
+        {% for link in student_links %}
+          <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
+            {% if link.title %}
+              <a class="link" href="{{ link.url }}">{{ link.title }}</a>
+            {% else %}
+              <a class="link" href="{{ link.url }}">{{ link.url }}</a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="btt-button">
+        <a class="btn btn-outline-secondary" href="#" role="button">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script>
+      document.querySelector(".btt-button").addEventListener("click", function(e){
+        window.scrollTo(0,0);
+      })
+  </script>
+{% endblock %}

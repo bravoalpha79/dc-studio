@@ -1,0 +1,5 @@
+.links a, 
+.student-links a {
+  color: inherit;
+  text-decoration: none;
+}
