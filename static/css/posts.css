@@ -4,6 +4,11 @@
   width: 50%;
 }
 
+/* hide in-text images on all-posts view */
+.post p img {
+  display: none;
+}
+
 img.note-float-left, 
 img.note-float-right,
 .post-image img,
