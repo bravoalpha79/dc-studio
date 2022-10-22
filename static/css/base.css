@@ -30,6 +30,14 @@ nav hr:not([size]) {
   width: 3.5rem;
 }
 
+a.nav-link.small.driving-link {
+  padding-right: .2rem;
+}
+
+.driving-link.hidden {
+  display: none;
+}
+
 /* Custom navbar dropdown */
 
 .container-fluid.navbar-dropdown {

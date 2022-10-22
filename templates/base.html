@@ -80,9 +80,12 @@
               >
             </li>
             <li class="nav-item text-end">
-              <a class="nav-link" href="#"
-                >Prevladati strah od vožnje - individualni i grupni pristup</a
-              >
+                  <a class="nav-link driving-dropdown" href="#">
+                  Tretmani straha od vožnje</a>
+                  <a class="nav-link small py-2 driving-link hidden" href="{% url 'driving_individual' %}"
+                  >Individualni pristup</a>
+                  <a class="nav-link small pt-2 pb-3 driving-link hidden" href="{% url 'driving_group' %}"
+                  >Tečaj Provozi!</a>
             </li>
             <li class="nav-item text-end">
               <a class="nav-link" href="#">Iz medija</a>
