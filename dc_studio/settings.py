@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'about',
     'links',
     'driving',
+    'contacts_and_rates',
 ]
 
 MIDDLEWARE = [
