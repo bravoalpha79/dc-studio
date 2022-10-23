@@ -4,3 +4,9 @@
   overflow-wrap: break-word;
   text-decoration: none;
 }
+
+.link-hr {
+  background-color: #555;
+  margin: 0 auto;
+  width: 33%;
+}

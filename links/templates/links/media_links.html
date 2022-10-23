@@ -18,8 +18,8 @@
         </div>
       </div>
       <div class="overlay"></div>
-      <div class="links row justify-content-center mt-5 mb-3">
-        {% for link in links %}
+      {% for link in links %}
+        <div class="links row justify-content-center mt-4 mb-3">
           <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
             {% if link.title %}
               <a class="link" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
@@ -27,13 +27,15 @@
               <a class="link" href="{{ link.url }}" target="_blank">{{ link.url }}</a>
             {% endif %}
           </div>
-          <div class="col-11 col-lg-10 col-xl-7 my-3">
+          <div class="col-11 col-lg-10 col-xl-7 mb-3">
             <p class="link-summary fst-italic small">
               {{ link.summary }}
             </p>
           </div>
-        {% endfor %}
-      </div>
+        </div>
+        <hr class="link-hr">
+      {% endfor %}
+      <div class="spacer"></div>
       <div class="btt-button">
         <a class="btn btn-outline-secondary" href="#" role="button">
           <i class="fas fa-arrow-up"></i>
