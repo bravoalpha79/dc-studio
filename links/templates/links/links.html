@@ -25,9 +25,9 @@
         {% for link in links %}
           <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
             {% if link.title %}
-              <a class="link" href="{{ link.url }}">{{ link.title }}</a>
+              <a class="link" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
             {% else %}
-              <a class="link" href="{{ link.url }}">{{ link.url }}</a>
+              <a class="link" href="{{ link.url }}" target="_blank">{{ link.url }}</a>
             {% endif %}
           </div>
         {% endfor %}
@@ -42,9 +42,9 @@
         {% for link in student_links %}
           <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
             {% if link.title %}
-              <a class="link" href="{{ link.url }}">{{ link.title }}</a>
+              <a class="link" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
             {% else %}
-              <a class="link" href="{{ link.url }}">{{ link.url }}</a>
+              <a class="link" href="{{ link.url }}" target="_blank">{{ link.url }}</a>
             {% endif %}
           </div>
         {% endfor %}
