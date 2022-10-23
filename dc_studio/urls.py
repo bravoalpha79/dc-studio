@@ -26,6 +26,6 @@ urlpatterns = [
     path('psihoedukativni_kutak/', include('educational_pages.urls')),
     path('strucni_tim/', include('team.urls')),
     path('o_klinickom_studiju/', include('about.urls')),
-    path('korisni_linkovi/', include('links.urls')),
+    path('linkovi/', include('links.urls')),
     path('strah_od_voznje/', include('driving.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
