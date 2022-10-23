@@ -11,7 +11,7 @@ class ContactInfo(models.Model):
         verbose_name_plural = "Kontakti i informacije"
 
 class RateList(models.Model):
-    ratelist_pdf = models.FileField(null=False, upload_to='')
+    ratelist_pdf = models.FileField(null=False, blank=False)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now_add=True)
 
