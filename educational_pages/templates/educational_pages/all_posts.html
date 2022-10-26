@@ -31,12 +31,6 @@
               <img src="{{ post.image.url }}" class="img-fluid">
             </div>
           {% endif %}
-          <div class="post-details mt-2 mb-5">
-            {% if post.author %}
-              <p class="post-author fw-bold mb-1">Autor: {{ post.author }}</p>
-            {% endif %}
-            <small>Objavljeno: {{ post.date_published }}</small>
-          </div>
           <div class="post-content mt-3">
             <em>{{ post.content | safe | truncatewords_html:80 }}</em>
           </div>

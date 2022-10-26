@@ -16,7 +16,6 @@
       <div class="single-post row justify-content-center mt-3 mb-3">
         <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-3">
           <h2 class="page-title mt-3">{{ post.title }}</h2>
-          <p class="mt-3 text-muted fst-italic">{% if post.author %}Autor: {{ post.author }}, o{% else %}O{% endif %}bjavljeno: {{ post.date_published | date:"j. E Y."}}</p>
           {% if post.image %}
             <div class="in-post-image text-center mt-5">
               <img src="{{ post.image.url }}" class="img-fluid">
