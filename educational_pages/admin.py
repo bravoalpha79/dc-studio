@@ -6,6 +6,7 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = "content"
 
     list_display = (
+        "position",
         "title",
         "author",
         "tags",
@@ -14,6 +15,6 @@ class PostAdmin(SummernoteModelAdmin):
 
     prepopulated_fields = {"slug": ("title",)}
 
-    ordering = ("-date_published", )
+    ordering = ("position", )
 
 admin.site.register(Post, PostAdmin)

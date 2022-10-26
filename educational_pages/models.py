@@ -9,6 +9,7 @@ class Post(models.Model):
     content = models.TextField(null=False, blank=False)
     image = models.ImageField(null=True, blank=True)
     date_published = models.DateField(auto_now_add=True)
+    position = models.IntegerField(null=False, default=10)
 
     class Meta:
         verbose_name = "Članak"

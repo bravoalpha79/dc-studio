@@ -10,15 +10,19 @@ class TeamMemberAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
     summernote_fields = "biography"
 
     list_display = (
-        "name_and_title",
+        "position", "name_and_title",
     )
+
+    ordering = ("position", )
 
 class AssociateAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
     summernote_fields = "biography"
 
     list_display = (
-        "name_and_title",
+        "position", "name_and_title",
     )
+
+    ordering = ("position", )
 
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Associate, AssociateAdmin)
