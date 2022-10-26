@@ -17,3 +17,4 @@ class RateList(models.Model):
 
     class Meta:
         verbose_name = "Cjenik"
+        verbose_name_plural = "Cjenik"
