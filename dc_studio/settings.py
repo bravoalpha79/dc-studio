@@ -123,6 +123,7 @@ SUMMERNOTE_CONFIG = {
     'summernote': {
         'fontNames': ['Helvetica', 'Verdana', 'Arial', 'Quicksand'],
         'fontNamesIgnoreCheck': ['Quicksand'],
+        'fontSizes': ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '36', '48' , '64', '82', '150']
     },
 }
 
