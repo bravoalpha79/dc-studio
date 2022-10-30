@@ -124,8 +124,8 @@ SUMMERNOTE_CONFIG = {
         'fontNames': ['Helvetica', 'Verdana', 'Arial', 'Quicksand'],
         'fontNamesIgnoreCheck': ['Quicksand'],
         'fontSizes': ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '36', '48' , '64', '82', '150'],
-        'attachment_filesize_limit': 4096 * 4096, 
     },
+    'attachment_filesize_limit': 4096 * 4096, 
 }
 
 # Internationalization
