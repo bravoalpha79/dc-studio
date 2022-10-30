@@ -32,7 +32,9 @@ nav hr:not([size]) {
 
 .navbar-light .navbar-toggler {
   border: none;
+  border-radius: 50%;
 }
+
 .navbar-toggler:focus {
   box-shadow: none;
 }
@@ -45,7 +47,9 @@ nav hr:not([size]) {
   background-image: url('/media/chevron-bar-expand.svg');
 }
 
-
+.navbar-toggler:hover {
+  background-color: #e9ebec;
+}
 
 
 a.nav-link.small.driving-link {
