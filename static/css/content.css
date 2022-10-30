@@ -23,7 +23,7 @@ body {
 }
 
 .link-wrapper:hover {
-  color: rgb(144, 29, 211) !important;
+  color: #901dd3 !important;
   text-decoration: none;
 }
 

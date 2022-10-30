@@ -43,14 +43,17 @@ nav hr:not([size]) {
   background-image: url('/media/chevron-bar-contract.svg');
 }
 
+.navbar-light .navbar-toggler[aria-expanded=true] .navbar-toggler-icon:hover {
+  background-image: url('/media/chevron-bar-contract-hover.svg');
+}
+
 .navbar-light .navbar-toggler[aria-expanded=false] .navbar-toggler-icon {
   background-image: url('/media/chevron-bar-expand.svg');
 }
 
-.navbar-toggler:hover {
-  background-color: #e9ebec;
+.navbar-light .navbar-toggler[aria-expanded=false] .navbar-toggler-icon:hover {
+  background-image: url('/media/chevron-bar-expand-hover.svg');
 }
-
 
 a.nav-link.small.driving-link {
   padding-right: .2rem;
