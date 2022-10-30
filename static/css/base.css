@@ -30,6 +30,24 @@ nav hr:not([size]) {
   width: 3.5rem;
 }
 
+.navbar-light .navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-light .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
+  background-image: url('/media/chevron-bar-contract.svg');
+}
+
+.navbar-light .navbar-toggler[aria-expanded=false] .navbar-toggler-icon {
+  background-image: url('/media/chevron-bar-expand.svg');
+}
+
+
+
+
 a.nav-link.small.driving-link {
   padding-right: .2rem;
 }
