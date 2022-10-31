@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="overlay"></div>
-  {% for post in posts %}
+  {% for post in page_obj %}
     <div class="post row justify-content-center mt-4 mb-4">
         <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-4">
           <h5 class="post-title mb-4">
@@ -38,6 +38,27 @@
     </div>
     <hr class="post-hr mt-5">
   {% endfor %}
+  <div class="post row justify-content-center mt-5 mb-4">
+    <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-4 text-center">
+      <div class="pagination">
+        <span class="step-links mx-auto fw-bold">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; prva</a>
+                <a href="?page={{ page_obj.previous_page_number }}">prethodna</a>
+            {% endif %}
+
+            <span class="current mx-2">
+                Stranica {{ page_obj.number }} od {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="mx-1">sljedeća</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}" class="mx-1">posljednja &raquo;</a>
+            {% endif %}
+        </span>
+      </div>
+    </div>
+  </div>
   <div class="spacer"></div>
   <div class="btt-button">
     <a class="btn btn-outline-secondary" href="#" role="button">
