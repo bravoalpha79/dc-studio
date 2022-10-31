@@ -101,9 +101,10 @@
             </li>
           </ul>
           <hr class="mt-1" />
-          <form class="d-flex justify-content-end mt-3 mb-2">
+          <form action="{% url 'search' %}" method="GET" class="d-flex justify-content-end mt-3 mb-2">
             <input
               class="form-control me-2"
+              name="query"
               type="search"
               placeholder="Unesite pojam za pretragu..."
               aria-label="Search"
