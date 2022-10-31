@@ -22,7 +22,13 @@ body {
   text-decoration: none;
 }
 
-.link-wrapper:hover {
+.pagination a {
+  color: initial;
+  font-weight: lighter;
+}
+
+.link-wrapper:hover,
+.pagination a:hover {
   color: #901dd3 !important;
   text-decoration: none;
 }
@@ -38,6 +44,7 @@ body {
 .spacer {
   height: 3rem;
 }
+
 
 /* --- MEDIA QUERIES --- */
 
