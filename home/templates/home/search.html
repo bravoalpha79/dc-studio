@@ -59,9 +59,9 @@
             <div class="links row justify-content-center mt-4 mb-3">
                 <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
                 {% if link.title %}
-                    <h5><a class="link d-inline" href="{{ link.url }}" target="_blank">{{ link.title }}<span class="external-link-tag fst-italic small">(vanjska poveznica)</span></a></h5>
+                    <h5><a class="link" href="{{ link.url }}" target="_blank">{{ link.title }}<span class="external-link-tag fst-italic small">(vanjska poveznica)</span></a></h5>
                 {% else %}
-                    <h5><a class="link d-inline" href="{{ link.url }}" target="_blank">{{ link.url }}<span class="external-link-tag fst-italic small">(vanjska poveznica)</span></a></h5>
+                    <h5><a class="link" href="{{ link.url }}" target="_blank">{{ link.url }}<span class="external-link-tag fst-italic small">(vanjska poveznica)</span></a></h5>
                 {% endif %}
                 </div>
                 <div class="col-11 col-lg-10 col-xl-7 mt-3 mb-3">
