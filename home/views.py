@@ -15,6 +15,7 @@ def index(request):
 def search(request):
     q = request.GET["query"] if "query" in request.GET else None
     results = None
+    page_obj = None
 
     if q:
         posts = Post.objects.annotate(search=SearchVector("title", "content")).filter(search=q)
