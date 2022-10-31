@@ -33,6 +33,11 @@ body {
   text-decoration: none;
 }
 
+.external-link-tag {
+  color: #c7c5c5;
+  margin-left: 0.5rem;
+}
+
 .btt-button {
   height: 40px;
   width: 40px;
