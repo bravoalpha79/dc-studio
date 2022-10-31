@@ -25,54 +25,73 @@
             <h4>Niste unijeli pojam za pretragu. Molimo pokušajte ponovno.</h4>
         </div>
     </div>
-  {% elif not posts and not links %}
+  {% elif not results %}
     <div class="post row justify-content-center mt-4 mb-4">
         <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-4">
             <h4>Nije pronađen nijedan rezultat.</em></h4>
         </div>
     </div>
   {% else %}
-    {% if posts %}
-        {% for post in posts %}
+    {% for result in page_obj %}
+      <!-- media links have urls, educational posts don't -->    
+      {% if result.url %}
+        <div class="links row justify-content-center mt-4 mb-3">
+            <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
+            {% if result.title %}
+                <h5><a class="link" href="{{ result.url }}" target="_blank">{{ result.title }}<span class="external-link-tag fst-italic"><small>(vanjska poveznica)</small></span></a></h5>
+            {% else %}
+                <h5><a class="link" href="{{ result.url }}" target="_blank">{{ result.url }}<span class="external-link-tag fst-italic"><small>(vanjska poveznica)</small></span></a></h5>
+            {% endif %}
+            </div>
+            <div class="col-11 col-lg-10 col-xl-7 mt-3 mb-3">
+            <p class="link-summary fst-italic">
+                {{ result.summary }}
+            </p>
+            </div>
+        </div>
+        <hr class="link-hr">
+      {% else %}
         <div class="post row justify-content-center mt-4 mb-4">
             <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-4">
               <h5 class="post-title mb-4">
-                <a class="link-wrapper" href="{% url 'view_post' post.slug %}">
-                  {{ post.title }}
+                <a class="link-wrapper" href="{% url 'view_post' result.slug %}">
+                  {{ result.title }}
                 </a>
               </h5>
-              {% if post.image %}
+              {% if result.image %}
                 <div class="post-image text-center mt-4 mb-4">
-                  <img src="{{ post.image.url }}" class="img-fluid">
+                  <img src="{{ result.image.url }}" class="img-fluid">
                 </div>
               {% endif %}
               <div class="post-content mt-3">
-                <em>{{ post.content | safe | truncatewords_html:30 }}</em>
+                <em>{{ result.content | safe | truncatewords_html:30 }}</em>
               </div>
             </div>
         </div>
         <hr class="link-hr">
-        {% endfor %}
-    {% endif %}
-    {% if links %}
-        {% for link in links %}
-            <div class="links row justify-content-center mt-4 mb-3">
-                <div class="link-wrapper col-11 col-lg-10 col-xl-7 mt-3">
-                {% if link.title %}
-                    <h5><a class="link" href="{{ link.url }}" target="_blank">{{ link.title }}<span class="external-link-tag fst-italic"><small>(vanjska poveznica)</small></span></a></h5>
-                {% else %}
-                    <h5><a class="link" href="{{ link.url }}" target="_blank">{{ link.url }}<span class="external-link-tag fst-italic"><small>(vanjska poveznica)</small></span></a></h5>
-                {% endif %}
-                </div>
-                <div class="col-11 col-lg-10 col-xl-7 mt-3 mb-3">
-                <p class="link-summary fst-italic">
-                    {{ link.summary }}
-                </p>
-                </div>
-            </div>
-            <hr class="link-hr">
-        {% endfor %}
-    {% endif %}
+      {% endif %}    
+    {% endfor %}
+    <div class="post row justify-content-center mt-5 mb-4">
+      <div class="col-11 col-lg-10 col-xl-7 mx-auto mt-4 text-center">
+        <div class="pagination">
+          <span class="step-links mx-auto fw-bold">
+              {% if page_obj.has_previous %}
+                  <a href="?query={{ query }}&page=1">&laquo; prva</a>
+                  <a href="?query={{ query }}&page={{ page_obj.previous_page_number }}">prethodna</a>
+              {% endif %}
+  
+              <span class="current mx-2">
+                  Stranica {{ page_obj.number }} od {{ page_obj.paginator.num_pages }}.
+              </span>
+  
+              {% if page_obj.has_next %}
+                  <a href="?query={{ query }}&page={{ page_obj.next_page_number }}" class="mx-1">sljedeća</a>
+                  <a href="?query={{ query }}&page={{ page_obj.paginator.num_pages }}" class="mx-1">posljednja &raquo;</a>
+              {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
   {% endif %}
   <div class="spacer"></div>
   <div class="btt-button">
