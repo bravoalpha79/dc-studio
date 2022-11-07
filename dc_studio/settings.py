@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'links',
     'driving',
     'contacts_and_rates',
+    'cooperation',
 ]
 
 MIDDLEWARE = [
