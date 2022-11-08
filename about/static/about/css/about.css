@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-.about-content p:has(img) {
+.about-content p:has(+ img) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
