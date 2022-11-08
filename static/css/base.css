@@ -81,8 +81,8 @@ a.nav-link.small.driving-link {
   }
 
   .container-fluid.navbar-dropdown {
-    min-width: 28rem;
-    max-width: 28rem;
+    min-width: 25rem;
+    max-width: 25rem;
   }
 }
 
@@ -100,7 +100,7 @@ a.nav-link.small.driving-link {
   }
 
   .form-control[type="search"] {
-    width: 68%;
+    width: 75%;
   }
 }
 
@@ -109,10 +109,6 @@ a.nav-link.small.driving-link {
     background: url(/media/desktop_wide.jpg) no-repeat top center scroll;
     background-size: cover;
   }
-
-  /* .form-control[type="search"] {
-    width: 75%;
-  } */
 }
 
 @media (min-width: 1400px) {
@@ -120,10 +116,6 @@ a.nav-link.small.driving-link {
     background: url(/media/desktop_wide.jpg) no-repeat top center scroll;
     background-size: cover;
   }
-
-  /* .form-control[type="search"] {
-    width: 75%;
-  } */
 }
 
 /* fix for background image on Safari/iOS - https://stackoverflow.com/a/52266360 */
