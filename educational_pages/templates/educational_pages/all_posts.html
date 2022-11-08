@@ -70,9 +70,5 @@
 
 {% block postloadjs %}
   {{ block.super }}
-  <script>
-      document.querySelector(".btt-button").addEventListener("click", function(e){
-        window.scrollTo(0,0);
-      })
-  </script>
+  <script src="{% static 'js/btt.js' %}"></script>
 {% endblock %}

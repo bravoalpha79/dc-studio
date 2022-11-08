@@ -1,4 +1,4 @@
-// code from https://bootstrap-menu.com/detail-autohide.html
+// toggle show/hide driving sub-links
 
 document.addEventListener("DOMContentLoaded", function(){
   document.querySelector(".driving-dropdown").addEventListener("click", function() {
