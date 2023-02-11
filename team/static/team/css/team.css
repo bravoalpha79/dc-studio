@@ -4,7 +4,7 @@ h5 {
 }
 
 .member-image .img-fluid {
-  max-width: 50%;
+  max-width: 10rem;
   float: left;
   height: auto;
   margin: .4rem .9rem .4rem 0;
