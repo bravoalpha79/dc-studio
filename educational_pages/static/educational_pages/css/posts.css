@@ -29,3 +29,7 @@ img.note-float-left {
 img.note-float-right {
   margin-left: 1rem;
 }
+
+.single-post h6 {
+  margin-bottom: 1rem;
+}
