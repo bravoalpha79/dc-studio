@@ -1,5 +1,5 @@
-from tabnanny import verbose
 from django.db import models
+
 
 class Post(models.Model):
     title = models.CharField(max_length=254, null=False, blank=False)
