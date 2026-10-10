@@ -56,7 +56,8 @@ INSTALLED_APPS = [
     'driving',
     'contacts_and_rates',
     'cooperation',
-    'mindfulness_studio'
+    'mindfulness_studio',
+    'expert_education'
 ]
 
 MIDDLEWARE = [

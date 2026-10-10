@@ -31,4 +31,5 @@ urlpatterns = [
     path('info/', include('contacts_and_rates.urls')),
     path('pravne_osobe/', include('cooperation.urls')),
     path('mindfulness_studio/', include('mindfulness_studio.urls')),
+    path('edukacije_strucnjaka/', include('expert_education.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
