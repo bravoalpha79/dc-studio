@@ -82,12 +82,14 @@
               >
             </li>
             <li class="nav-item text-end">
-                  <a class="nav-link driving-dropdown" href="#">
-                  Tretmani straha od vožnje</a>
-                  <a class="nav-link small py-2 driving-link hidden" href="{% url 'driving_individual' %}"
-                  >Strah od vožnje</a>
-                  <a class="nav-link small pt-2 pb-3 driving-link hidden" href="{% url 'driving_group' %}"
-                  >Program Provozi!</a>
+              <a class="nav-link driving-dropdown" href="#drivingMenu" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="drivingMenu">
+              Tretmani straha od vožnje</a>
+              <div class="collapse" id="drivingMenu">
+                <a class="nav-link small py-2 driving-link" href="{% url 'driving_individual' %}">
+                  Strah od vožnje</a>
+                <a class="nav-link small pt-2 pb-3 driving-link" href="{% url 'driving_group' %}">
+                Program Provozi!</a>
+              </div>
             </li>
 
             {% if mindfulness_studio %}
@@ -95,6 +97,21 @@
               <a class="nav-link" href="{% url 'mindfulness_studio' %}">
                 Mindfulness studio
               </a>
+            </li>
+            {% endif %}
+
+            {% if expert_educations %}
+            <li class="nav-item text-end">
+              <a class="nav-link expert-education-dropdown" href="#expertEducationMenu" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="expertEducationMenu">
+                Edukacije stručnjaka
+              </a>
+              <div class="collapse" id="expertEducationMenu">
+                {% for education in expert_educations %}
+                <a class="nav-link small expert-education-link {% if forloop.last %} pb-3 {% endif %}" href="{% url 'expert_education' education.slug %}">
+                  {{ education.title }}
+                </a>
+                {% endfor %}
+              </div>
             </li>
             {% endif %}
     
@@ -130,8 +147,5 @@
     </nav>
     <main>{% block content %} {% endblock %}</main>
     
-    {% block postloadjs %}
-    <script src="{% static 'js/navbar.js' %}"></script>
-    {% endblock %}
   </body>
 </html>
