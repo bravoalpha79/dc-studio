@@ -29,5 +29,6 @@ urlpatterns = [
     path('linkovi/', include('links.urls')),
     path('strah_od_voznje/', include('driving.urls')),
     path('info/', include('contacts_and_rates.urls')),
-    path('pravne_osobe/', include('cooperation.urls'))
+    path('pravne_osobe/', include('cooperation.urls')),
+    path('mindfulness_studio/', include('mindfulness_studio.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
