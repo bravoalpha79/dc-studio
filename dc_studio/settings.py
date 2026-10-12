@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'driving',
     'contacts_and_rates',
     'cooperation',
+    'mindfulness_studio',
+    'expert_education'
 ]
 
 MIDDLEWARE = [
@@ -84,6 +86,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.media',
                 'django.contrib.messages.context_processors.messages',
+                'dc_studio.context_processors.nav_pages'
             ],
         },
     },
